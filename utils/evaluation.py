@@ -1,4 +1,4 @@
-def check_answer(question, user_answer) -> bool:
+def check_answer(question: str, user_answer: str) -> bool:
     try:
         question_answer = float(eval(question))
         user_answer = float(user_answer.strip())
@@ -6,5 +6,5 @@ def check_answer(question, user_answer) -> bool:
     except Exception as e:
         return False
 
-def cal_precision(correct, total):
+def cal_precision(correct, total) -> float:
     return round(correct / total, 2)
